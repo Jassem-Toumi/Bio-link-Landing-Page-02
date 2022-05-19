@@ -1,0 +1,325 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  margin: 0;
+  padding: 0; 
+  min-height: 100%;
+  min-width: 100%;
+  box-sizing: inherit;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* -----------------------------------------------------Framework Background --------------------------------------------------- */
+.framework {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+background: linear-gradient(0deg, rgba(247, 183, 59, 1) 20%, rgba(255, 233, 200, 0.3851241208194347) 82%, rgba(255, 239, 214, 0.3570342331789853) 100%);
+}
+
+
+
+/* ------------------------------------------------ CARD ----------------------------------------------------- */
+/* Mobile-First Styling Process */
+ .card{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right:auto;
+  padding: 0;
+  inset: 0;
+  width: 90%;
+  height: 94%;
+  max-width: 600px;
+  top: 3%;
+  bottom: 3%;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;  
+  box-shadow: 5px 2.5px 2.5px rgb(119, 117, 117);
+  box-sizing: border-box;
+  animation: oscillation 1.5s linear 0s infinite alternate;
+}
+
+@keyframes oscillation {
+  0%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.card-content{
+  width: 100%;
+  height: inherit;
+  padding: 0;
+  margin: 1.2rem auto 1.2rem auto;
+}
+
+.header{
+  width: 100%;
+  max-height: 30%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./header-bg.jpg');
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.profile-picture{
+  border-radius: 50%;
+  /* position: absolute; */
+  width: 120px;
+  height: 120px;
+  background-image: url('./profile-picture.jpg');
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: auto;
+  margin-right:auto;
+  border: 2px solid #ffff;
+}
+
+.name{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  height: 10%;
+  width: 80%;
+  border: 1px solid #00000060;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: .3s;
+  cursor: pointer;
+}
+.name:hover{
+  padding: 0;
+}
+.name h1{
+  display: flex;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.735);
+  /* background-color: #f7b73b; */
+  background: linear-gradient(-50deg, rgba(221, 216, 255, 1) 60%, rgba(255, 255, 255, 1) 100%);  
+
+  border-radius: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 100%;
+}
+
+.profession{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  margin: .7rem auto 0 auto;
+}
+
+.profession h2{
+  font-size: 16px;
+  font-weight: lighter;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: fit-content;
+  color: #282828c4;
+}
+
+.profession h2::before{
+  content: "";
+  width: 3rem;
+  height: 1px;
+  background-color: #00000060;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.profession h2::after{
+  content: "";
+  width: 3rem;
+  height: 1px;
+  background-color: #00000060;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* ----------------- Links & Icons --------------*/
+
+.portfolio-icon{
+  display:flex;
+  /* border: 1px solid #00000042;   */
+  border-radius: 50%;
+  width: 20%;
+  max-width: 40px;
+  min-width: 32px;
+  height: auto;
+  /* background-color: #f7b73b; */
+  background: linear-gradient(-50deg, rgb(237, 159, 2) 55%, rgba(244, 243, 255, 0.9890567050890976) 100%);
+justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 3px 3px 3px #9c9c9c;
+}
+.portfolio-icon img{
+  width: 28px;
+  height: auto;
+  position: absolute;
+  left: auto;
+  right: auto;
+  bottom: 0;
+}
+
+
+
+.linkedin-icon,
+.email-icon,
+.facebook-icon,
+.instagram-icon{
+    display: flex;
+      /* border: 1px solid #00000042; */
+      border-radius: 50%;
+      width: 20%;
+      max-width: 40px;
+      min-width: 32px;
+      height: auto;
+      /* background-color: #f7b73b; */
+      background: linear-gradient(-50deg, rgb(237, 159, 2) 55%, rgba(244, 243, 255, 0.9890567050890976) 100%);
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 3px 3px 3px #9c9c9c;
+}
+
+.linkedin-icon img,
+.email-icon img,
+.facebook-icon img,
+.instagram-icon img{
+  width: 23px;
+  height: auto;
+  position: absolute;
+  left: auto;
+  right: auto;
+}
+
+.links h3{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 5px;
+  font-size: 15px;
+}
+
+a{
+      display: flex;
+        width: 60%;
+        height: 45px;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 1rem auto 0 auto;
+        border: 1px solid #00000060;
+        border-radius: 30px;
+        padding: 3px;
+        justify-content: start;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.887);
+}
+
+a:hover {
+  background: linear-gradient(-50deg, rgba(221, 216, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+.links {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 75%;
+}
+
+/* -------------------- Responsiveness -------------------- */
+/* Medium and small */
+@media screen and (max-width:600px) {
+  .links {
+    width: 60%;
+  }
+
+  .links h3 {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 350px){
+  .links h3{
+    font-size: 12px;
+    padding: 10px;
+  }
+    .portfolio-icon img {
+      width: 25px;
+    }
+    .linkedin-icon img,
+    .email-icon img,
+    .facebook-icon img,
+    .instagram-icon img{
+      width: 20px;
+    }
+}
+
+/* Extra Small Devices */
+
+@media screen and (max-width: 300px){
+    .links h3 {
+        font-size: 10px;
+        padding: 12px;
+      }
+    
+      .portfolio-icon img {
+        width: 24px;
+        height: auto;
+      }
+    
+      .linkedin-icon img,
+      .email-icon img,
+      .facebook-icon img,
+      .instagram-icon img {
+        width: 18px;
+        height: auto;
+      }
+}
+
+
